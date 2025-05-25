@@ -3,12 +3,12 @@
 const video_list = [
     //template for easier population
     //{ title: "", url: "./content/videos/memes/" },
-    { title: "Dumby Kitty", url: "/content/videos/memes/6intbarbarian.mp4" },
-    { title: "Mady kitty", url: "/content/videos/memes/anger-silent.mp4" },
-    { title: "Very Mad Bee", url: "/content/videos/memes/anger.mp4" },
-    { title: "Silly Kitty", url: "/content/videos/memes/ass_slapping.mov" },
-    { title: "Funky Bird", url: "/content/videos/memes/bird-birds.mp4" },
-    { title: "Fighty Kittys", url: "/content/videos/memes/bop_bop.mp4" },
+    { title: "Dumby Kitty", url: "./content/videos/memes/6intbarbarian.mp4" },
+    { title: "Mady kitty", url: "./content/videos/memes/anger-silent.mp4" },
+    { title: "Very Mad Bee", url: "./content/videos/memes/anger.mp4" },
+    { title: "Silly Kitty", url: "./content/videos/memes/ass_slapping.mov" },
+    { title: "Funky Bird", url: "./content/videos/memes/bird-birds.mp4" },
+    { title: "Fighty Kittys", url: "./content/videos/memes/bop_bop.mp4" },
   ];
 
   const video_selector = document.getElementById('video_selector');
@@ -31,3 +31,16 @@ const video_list = [
     video_player.play();
     video_player.style.display = "block";
   });
+  // Show loading animation.
+  var playPromise = video.play();
+
+  if (playPromise !== undefined) {
+    playPromise.then(_ => {
+      // Automatic playback started!
+      // Show playing UI.
+    })
+    .catch(error => {
+      // Auto-play was prevented
+      // Show paused UI.
+    });
+  }
