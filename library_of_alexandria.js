@@ -32,7 +32,7 @@ const video_list = [
     video_player.style.display = "block";
   });
   // Show loading animation.
-  var playPromise = video.play();
+  var playPromise = video_player.play();
 
   if (playPromise !== undefined) {
     playPromise.then(_ => {
