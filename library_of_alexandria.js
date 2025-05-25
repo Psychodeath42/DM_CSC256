@@ -31,16 +31,3 @@ const video_list = [
     video_player.play();
     video_player.style.display = "block";
   });
-  // Show loading animation.
-  var playPromise = video_player.play();
-
-  if (playPromise !== undefined) {
-    playPromise.then(_ => {
-      // Automatic playback started!
-      // Show playing UI.
-    })
-    .catch(error => {
-      // Auto-play was prevented
-      // Show paused UI.
-    });
-  }
