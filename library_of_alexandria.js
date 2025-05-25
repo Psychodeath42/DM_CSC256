@@ -25,7 +25,21 @@ const video_list = [
   // Handle dropdown change
   video_selector.addEventListener('change', () => {
     const selected_url = video_selector.value;
-    video_player.querySelector('source').src = selected_url;
+    const source = video_player.querySelector('source');
+    source.src = selected_url;
+
+    // Set correct MIME type
+    if (selected_url.endsWith('.mp4')) {
+      source.type = 'video/mp4';
+    } else if (selected_url.endsWith('.webm')) {
+      source.type = 'video/webm';
+    } else if (selected_url.endsWith('.ogg') || selected_url.endsWith('.ogv')) {
+      source.type = 'video/ogg';
+    } else if (selected_url.endsWith('.mov')) {
+      source.type = 'video/quicktime'; // NOTE: Not well supported
+    } else {
+      source.type = '';
+    }
     video_player.load();
     video_player.play();
     video_player.style.display = "block";
