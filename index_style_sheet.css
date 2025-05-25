@@ -1,0 +1,18 @@
+
+header{
+ text-align: center;   
+}
+body{background-color: rgb(3, 20, 36);}
+h1{font: large, bold; color: slateblue;}
+h2{color: aliceblue;}
+h3{color: aliceblue;}
+h4{color: aliceblue;}
+h5{color: aliceblue;}
+
+.meme_player{justify-content: center; padding: 15px; gap: .25; width: auto; text-align: center;}
+
+.meme_menu{margin-top: 0; width: auto; align-items: center;}
+.meme_video{align-items: center; justify-content: center; text-align: center; margin: 0 auto;}
+
+.form{justify-content: center; text-align: center;}
+footer{text-align: center; flex: auto;}

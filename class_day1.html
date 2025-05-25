@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week_One</title>
+    <link rel="stylesheet" href="./index_style_sheet.css"></link>
+    <script src="./library_of_alexandria.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Hearth's Demo Page</h1>
+        <h2>A place for silly stuff and testing code</h2>
+    </header>
+    <main>
+        <article class="meme_player">
+        <h3>Select a Video</h3>
+         <select id="video_selector" class="meme_menu">
+           <option disabled selected>Select a video</option>
+          </select>
+
+          <br><br>
+
+         <video class="meme_video" id="video_player" width="640" controls style="display: none;">
+           <source src="" type="video/mp4">
+           Your browser does not support the video tag.
+         </video>
+        </article>
+        <section class="form">
+            <form>
+                <input type="text" placeholder="Your Name" id="txt_name" name="txt_name" required><br>
+                <input type="number" placeholder="Your Phone Number" id="phn_number" name="phn_number" required><br>
+                <select required id="list" name="list">
+                    <option selected>Pick a Thing</options>
+                    <option>Thing1</option>
+                    <option>Thing2</option>
+                    <option>Thing3</option>
+                </select><br>
+                <button type="submit">Submit</button><br>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h5>This webspace made by magic and procrastination induced crunch time.</h5>
+        <h5>assignment requirements: HearthM GAA dramorri@uat.edu 2026</h5>
+    </footer>
+</body>
+</html>
