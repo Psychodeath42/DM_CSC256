@@ -31,3 +31,8 @@ const video_list = [
     video_player.play();
     video_player.style.display = "block";
   });
+  //injecting text articles
+  document.getElementById("h3_header_1").textContent = "This is a placeholder line.";
+  document.getElementById("h4_subheader_1").textContent = "I forgot what I was suppose to say here.";
+  document.getElementById("para_1").textContent = "This is an example of what a paragraph would look like if it were typed out. the fitness gram pacer test is a mult stage aerobics test to i forgot the rest of the lines but this is just filler to try to see how far this text wrapping needs to go so i'm just going to be writing a really long text so that it can wrap around. minecraft is one of the most sold games on the planet, wrackign in a whopping 300 million sales in some year i don't really remember but it was pretty recently.";
+  document.getElementById("para_2").textContent = "This is an example of what a paragraph would look like if it were typed out. the fitness gram pacer test is a mult stage aerobics test to i forgot the rest of the lines but this is just filler to try to see how far this text wrapping needs to go so i'm just going to be writing a really long text so that it can wrap around. minecraft is one of the most sold games on the planet, wrackign in a whopping 300 million sales in some year i don't really remember but it was pretty recently.";

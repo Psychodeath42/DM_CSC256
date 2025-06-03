@@ -8,6 +8,7 @@ h2{color: aliceblue;}
 h3{color: aliceblue;}
 h4{color: aliceblue;}
 h5{color: aliceblue;}
+p{color: aliceblue;}
 
 .meme_player{justify-content: center; padding: 15px; gap: .25; width: auto; text-align: center;}
 
@@ -16,3 +17,5 @@ h5{color: aliceblue;}
 
 .form{justify-content: center; text-align: center;}
 footer{text-align: center; flex: auto;}
+.javascript_section{display: block; margin: auto; width: 25%; justify-content: center; text-align: center; }
+.confinement{color: azure;}
