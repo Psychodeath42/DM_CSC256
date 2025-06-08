@@ -47,8 +47,8 @@ const video_list = [
   //slideshow
   let array_images = [
     "./Content/Images/alt_girl.png",
-    "./Content/Images/clouded.png",
-    "./Content/Images/Dolly_full.png",
+    "./Content/Images/satori_full_color.png",
+    "./Content/Images/nezumi_full_color.png",
     "./Content/Images/foxo.png"
   ];
   // the first image in an index is 0
