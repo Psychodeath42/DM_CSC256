@@ -48,7 +48,7 @@ const video_list = [
   let array_images = [
     "./Content/Images/alt_girl.png",
     "./Content/Images/clouded.png",
-    "./Content/Images/dolly_full.png",
+    "./Content/Images/Dolly_full.png",
     "./Content/Images/foxo.png"
   ];
   // the first image in an index is 0
