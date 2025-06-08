@@ -19,3 +19,6 @@ p{color: aliceblue;}
 footer{text-align: center; flex: auto;}
 .javascript_section{display: block; margin: auto; width: 25%; justify-content: center; text-align: center; }
 .confinement{color: azure;}
+
+#img_slide{width: 15%;}
+.slides{justify-content: center; text-align: center;}
