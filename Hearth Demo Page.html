@@ -69,9 +69,30 @@
 
          </section>
 
+         <br> <br> <br>
+<!-- this section is for containing the array implement -->
+         <section class="user_array_section">
+
+            <h3 id="h3_header_array"></h3>
+
+            <label class="title_label" for="user_game_title">Enter Game Title:</label><br>
+
+            <input type="text" id="user_game_title" name="user_game_title" placeholder="Game Name" required><br>
+
+            <button type="submit" onclick="add_title();">Add a Game</button>
+
+            <div>
+
+                <button onclick="reset_titles();">Reset Titles</button>
+
+            </div>
+
+            <div class="game_titles_css" id="titles_display"></div>
+         </section>
+
     </main>
 
-
+    
     <footer>
 
         <h5>This webspace made by magic and procrastination induced crunch time.</h5>

@@ -22,3 +22,7 @@ footer{text-align: center; flex: auto;}
 
 #img_slide{width: 15%;}
 .slides{justify-content: center; text-align: center;}
+
+.user_array_section{justify-content: center; text-align: center;}
+.game_titles_css{color: aliceblue;}
+.title_label{color: aliceblue; overflow-y: auto; height: 5%;}

@@ -42,7 +42,7 @@ const video_list = [
   document.getElementById("h4_subheader_1").textContent = "I forgot what I was suppose to say here.";
   document.getElementById("para_1").textContent = "This is an example of what a paragraph would look like if it were typed out. the fitness gram pacer test is a mult stage aerobics test to i forgot the rest of the lines but this is just filler to try to see how far this text wrapping needs to go so i'm just going to be writing a really long text so that it can wrap around. minecraft is one of the most sold games on the planet, wrackign in a whopping 300 million sales in some year i don't really remember but it was pretty recently.";
   document.getElementById("para_2").textContent = "This is an example of what a paragraph would look like if it were typed out. the fitness gram pacer test is a mult stage aerobics test to i forgot the rest of the lines but this is just filler to try to see how far this text wrapping needs to go so i'm just going to be writing a really long text so that it can wrap around. minecraft is one of the most sold games on the planet, wrackign in a whopping 300 million sales in some year i don't really remember but it was pretty recently.";
-
+  document.getElementById("h3_header_array").textContent = "Add game titles here and sort them alphabetically"
 
   //slideshow
   let array_images = [
@@ -77,3 +77,45 @@ const video_list = [
     display_slideshow_image(current_slide)
   }
   display_slideshow_image(current_slide)
+
+
+
+  //user array section
+
+
+  let array_game_titles = [];
+
+  function add_title(){
+    
+    let user_game_names = document.getElementById("user_game_title");
+    let game_name = user_game_title.value;
+
+    //console.log("game_name=" + game_name);
+
+    if (game_name != ""){
+      array_game_titles.push(game_name);
+      user_game_names.value = "";
+      display_game_titles();
+    }
+
+  }
+
+  //function to display titles on page
+  function display_game_titles(){
+
+    let titles_display = document.getElementById("titles_display");
+    // sorts all the items in the array in alphabetical order
+    array_game_titles.sort();
+    // adds a space between all items in the array
+    titles_display.innerHTML = array_game_titles.join("<br>");
+
+  }
+
+  //reset titles
+  function reset_titles(){
+    //sets the array to have nothing in it
+    array_game_titles = [];
+    //displays the nothing
+    display_game_titles();
+
+  }
