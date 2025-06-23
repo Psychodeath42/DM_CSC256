@@ -109,6 +109,10 @@ const video_list = [
     // adds a space between all items in the array
     titles_display.innerHTML = array_game_titles.join("<br>");
 
+    let random_string = Math.floor(Math.random() * array_game_titles.length);
+    let display_random = array_game_titles[random_string];
+    document.getElementById("h3_game_title").innerHTML = display_random;
+
   }
 
   //reset titles
@@ -118,4 +122,33 @@ const video_list = [
     //displays the nothing
     display_game_titles();
 
+  }
+
+  //game form function
+  function generate_form(){
+    
+    let plr_nm = document.getElementById("txt_player_nm");
+    
+    let plr_lvl = document.getElementById("num_player_lvl");
+    
+    let plr_stat = document.getElementById("num_player_stat");
+    
+    let plr_desc = document.getElementById("txt_player_desc");
+
+    console.log("name=" + plr_nm.value + "level=" + plr_lvl.value + "stats=" + plr_stat.value + "catchphrase=" + plr_desc.value);
+
+    let output = "Name |" + plr_nm.value +"|" + "<br>" +
+                "Level |" + plr_lvl.value +"|" + "<br>" +
+                "Stats |" + plr_stat.value +"|" + "<br>" +
+                "Catchphrase |" + plr_desc.value +"|" + "<br>";
+    console.log(output);
+
+    document.getElementById("player_info").style.display ="block";
+
+    document.getElementById("div_output").innerHTML = output;
+
+    plr_nm.value = "";
+    plr_lvl.value = "";
+    plr_stat.value = "";
+    plr_desc.value = "";
   }

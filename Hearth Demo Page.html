@@ -89,7 +89,29 @@
 
             <div class="game_titles_css" id="titles_display"></div>
          </section>
+<!-- this section is for the technical form -->
+        <section class="game_section">
+            <h3 id="h3_game_title"></h3>
+            <form id="form_player" name="form_player">
+                <label class="game_labels" for="text_player_nm">Choose Your Name</label>
+                <input type="text" id="txt_player_nm" name="txt_player_nm"><br>
 
+                <label class="game_labels" for="text_player_lvl">Choose Your Difficulty</label>
+                <input type="number" id="num_player_lvl" name="num_player_lvl"><br>
+
+                <label class="game_labels" for="text_player_stat">Choose Your Stats</label>
+                <input type="number" id="num_player_stat" name="num_player_stat"><br>
+
+                <label class="game_labels" for="text_player_desc">Write Your Catchphrase</label>
+                <input type="text" id="txt_player_desc" name="txt_player_desc"><br>
+            
+                <button type="button" onclick="generate_form();">Submit Character</button><br>
+            </form>
+
+            <h2 id="player_info" style="display: none;">Player Information</h2>
+            <div id="div_output" class="game_labels"></div>
+
+        </section>
     </main>
 
     
