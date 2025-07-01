@@ -46,8 +46,8 @@
         <section class="form">
 
             <form action="#" onsubmit="return false;">
-                <input type="text" placeholder="Your Name" id="txt_name" name="txt_name" required><br>
-                <input type="number" placeholder="Your Phone Number" id="phn_number" name="phn_number" required><br>
+                <input class="shorten_input" type="text" placeholder="Your Name" id="txt_name" name="txt_name" required><br>
+                <input class="shorten_input" type="number" placeholder="Your Phone Number" id="phn_number" name="phn_number" required><br>
                 <select required id="list" name="list">
                     <option selected>Pick a Thing</option>
                     <option>Thing1</option>
@@ -77,7 +77,7 @@
 
             <label class="title_label" for="user_game_title">Enter Game Title:</label><br>
 
-            <input type="text" id="user_game_title" name="user_game_title" placeholder="Game Name" required><br>
+            <input class="shorten_input" type="text" id="user_game_title" name="user_game_title" placeholder="Game Name" required><br>
 
             <button type="submit" onclick="add_title();">Add a Game</button>
 
@@ -89,21 +89,22 @@
 
             <div class="game_titles_css" id="titles_display"></div>
          </section>
+         <br> <br> <br>
 <!-- this section is for the technical form -->
         <section class="game_section">
             <h3 id="h3_game_title"></h3>
             <form id="form_player" name="form_player">
                 <label class="game_labels" for="text_player_nm">Choose Your Name</label>
-                <input type="text" id="txt_player_nm" name="txt_player_nm"><br>
+                <input class="shorten_input" type="text" id="txt_player_nm" name="txt_player_nm"><br>
 
                 <label class="game_labels" for="text_player_lvl">Choose Your Difficulty</label>
-                <input type="number" id="num_player_lvl" name="num_player_lvl"><br>
+                <input class="shorten_input" type="number" id="num_player_lvl" name="num_player_lvl"><br>
 
                 <label class="game_labels" for="text_player_stat">Choose Your Stats</label>
-                <input type="number" id="num_player_stat" name="num_player_stat"><br>
+                <input class="shorten_input" type="number" id="num_player_stat" name="num_player_stat"><br>
 
                 <label class="game_labels" for="text_player_desc">Write Your Catchphrase</label>
-                <input type="text" id="txt_player_desc" name="txt_player_desc"><br>
+                <input class="shorten_input" type="text" id="txt_player_desc" name="txt_player_desc"><br>
             
                 <button type="button" onclick="generate_form();">Submit Character</button><br>
             </form>
@@ -111,6 +112,32 @@
             <h2 id="player_info" style="display: none;">Player Information</h2>
             <div id="div_output" class="game_labels"></div>
 
+        </section>
+        <br> <br> <br>
+        <!--  -->
+        <section class="crossword_puzzle">
+            <table id="table_puzzle"></table>
+        </section>
+        <section class="crossword_hints">
+            <h2>Across</h2>
+           
+                <ol>
+                    <li>Something made of gold or onion</li>
+                    <li>Title for a Mideast ruler</li>
+                    <li>"Jeopardy!" round with just one clue</li>
+                    <li>____ baby</li>
+                    <li>Competed in pictionary</li>
+                </ol>
+                <h2>Down</h2>
+                <ol>
+                    <li>Soccer official</li>
+                    <li>"Yeah, that bothers me"</li>
+                    <li>San Francisco football player, informally</li>
+                    <li>Flavor of purple skittles</li>
+                    <li>Flo Rida hit with the lyric "Apple Bottom jeans, boots with the fur"</li>
+                </ol>
+
+            <button onclick="reveal_ans();">Reveal Answers</button>
         </section>
     </main>
 

@@ -15,6 +15,12 @@ const video_list = [
     { title: "Wicked Kitty", url: "./Content/Videos/Memes/cat_snowboard.mp4" },
     { title: "Mochicat Kitty", url: "./Content/Videos/Memes/Cats.mov" },
     { title: "Jumpy Kitty", url: "./Content/Videos/Memes/CATTIW.mp4" },
+    { title: "Howdy Kitty", url: "./Content/Videos/Memes/Cowboy Cat.mov" },
+    { title: "Invisble Kitty", url: "./Content/Videos/Memes/dissappear.mp4" },
+    { title: "Dummy Kitty", url: "./Content/Videos/Memes/dummy_little_guy.mp4" },
+    { title: "Spinny Kitty", url: "./Content/Videos/Memes/eek_the_cat.mp4" },
+    { title: "Eepy Kitty", url: "./Content/Videos/Memes/eepy Doorbell Cat.mov" },
+    { title: "Confused Kitty", url: "./Content/Videos/Memes/jinx_huh.mov" },
   ];
 
   const video_selector = document.getElementById('video_selector');
@@ -152,3 +158,101 @@ const video_list = [
     plr_stat.value = "";
     plr_desc.value = "";
   }
+
+
+  //crossword
+  let arr_words = new Array("ring","emir","final","nepo","drew","ref","imind","niner","grape","low")
+
+  function build_crossword(rows, cols){
+    let table = document.getElementById("table_puzzle");
+
+    for (let i = 0; i < rows; i++){
+      let row = document.createElement ("tr");
+
+      for (let j =0; j < cols; j++){
+        let col = document.createElement ("td");
+        row.appendChild(col);
+      }
+      table.appendChild(row);
+    }
+  }
+
+  //makes the words
+  function build_words(str_row, str_col, word_ind, dir, table, show_ans, clue_num){
+    let word = arr_words[word_ind];
+    for(let i=0; i<word.length; i++){
+
+      let row_ind = 0;
+      let col_ind = 0;
+
+      if(dir == "across"){
+        row_ind = str_row;
+        col_ind = str_col + i;
+      }
+
+      else{
+        row_ind = str_row +i;
+        col_ind = str_col;
+      }
+
+      let tr = table.rows[row_ind];
+      let td = tr.cells[col_ind];
+
+      if(i==0){
+        let number = document.createElement("span");
+        //sets the number
+        number.textContent = clue_num;
+        // sets the css style
+        number.className = "clue_number_cs";
+        td.appendChild(number);
+
+      }
+
+      if(!td.querySelector("input")){
+        let input = document.createElement("input");
+        input.setAttribute ("type","text");
+        input.setAttribute("maxlength", "1");
+
+        if(show_ans){
+          input.value = word[i].toUpperCase();
+        }
+        // add text input to table data
+        td.appendChild(input);
+      }
+      else{
+        let existing_input = td.getElementsByTagName("input")[0];
+        if(show_ans){
+          existing_input.value = word[i].toUpperCase();
+        }
+      }
+    }
+  }
+
+  build_crossword(5, 5);
+
+  let table = document.getElementById("table_puzzle");
+
+  build_words(0,0,0,"across",table,false,1);
+  build_words(1,0,1,"across",table,false,5);
+  build_words(2,0,2,"across",table,false,6);
+  build_words(3,1,3,"across",table,false,8);
+  build_words(4,1,4,"across",table,false,9);
+  build_words(0,0,5,"down",table,false,1);
+  build_words(0,1,6,"down",table,false,2);
+  build_words(0,2,7,"down",table,false,3);
+  build_words(0,3,8,"down",table,false,4);
+  build_words(2,4,9,"down",table,false,7);
+  
+  function reveal_ans(){
+    build_words(0,0,0,"across",table,true,1);
+    build_words(1,0,1,"across",table,true,5);
+    build_words(2,0,2,"across",table,true,6);
+    build_words(3,1,3,"across",table,true,8);
+    build_words(4,1,4,"across",table,true,9);
+    build_words(0,0,5,"down",table,true,1);
+    build_words(0,1,6,"down",table,true,2);
+    build_words(0,2,7,"down",table,true,3);
+    build_words(0,3,8,"down",table,true,4);
+    build_words(2,4,9,"down",table,true,7);
+  }
+  
