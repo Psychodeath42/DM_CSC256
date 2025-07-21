@@ -82,3 +82,20 @@ input{
 .chess_piece{width: 95%; height: 95%; margin: 1px; border-radius: 50%;}
 .chess_piece-r{background-color: rgb(255, 65, 65);}
 .chess_piece-bl{background-color: rgb(74, 74, 255);}
+
+#div_gameboard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.hole{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(53, 24, 19);
+    border-radius: 50%;
+}
+.mole{
+    width: 100px;
+    height: 100px;
+    background-color: bisque;
+}
