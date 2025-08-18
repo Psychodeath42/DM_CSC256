@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="Tower_Of_Babel.js"></script>
+    <link rel="stylesheet" href="final_style_sheet.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PsychieArt Homepage</title>
+</head>
+<body>
+    <nav>
+        <!-- navigation bar is in a container tbh i'm kinda basing this off twitch and yt's nav bars -->
+        <div id="container" class="style_nav_bar">
+            <!-- this is to go to the home page -->
+            <div id="home" class="style_nav_links"> 
+                <a class="navigation_link" href="Final_homepage.html">
+                    <p>Home</p>
+                </a>
+            </div>
+            <!-- goes to the gallery page -->
+            <div id="link_gallery" class="style_nav_links">
+                <a class="navigation_link" href="final_gallery.html">
+                    <p>Gallery</p>
+                </a>
+            </div>
+            <!-- logo gets put in the middle -->
+            <div id="logo" class="style_nav_logo">
+                <img id="image_logo" class="style_nav_logo" src="Content/Images/psychie_art_logo.png" alt="Psychie Logo">
+            </div>
+            <!-- this goes to the coding area -->
+            <div id="link_coding" class="style_nav_links_right">
+                <a class="navigation_link" href="final_playground.html">
+                    <p>Code Playground</p>
+                </a>
+            </div>
+            <!-- this goes to the about me area -->
+            <div id="link_about" class="style_nav_links_right">
+                <a class="navigation_link" href="final_aboutme.html">
+                    <p>About Me</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <div id="plink1" class="code_box">
+            <h1> Come on down and roll the Dice!</h1>
+        <button onclick="play_craps();">Roll the Dice</button>
+        <div id="craps_result">craps result</div>
+        <div id="die_1_result">die 1 result</div>
+        <div id="die_2_result">die 2 result</div>
+        <div id="sum_result">sum result</div>
+        </div>
+
+    <div id="plink2" class="code_box">
+            <h1>The Sphinx promises you great riches should you answer its three riddles correctly.</h1>
+
+    <form method="post" id="sphinx_form" onsubmit="return riddle_solver();">
+    
+        <label for="riddle_1">“What goes on four feet in the morning, two feet in midday, and three feet in the evening?” </label>
+        <input type="text" id="riddle_1" name="first_riddle"><br><br>
+
+        <label for="riddle_2">"What can run but never walks, Has a mouth but never talks, Has a bed but never sleeps, Has a head but never weeps?"</label>
+        <input type="text" id="riddle_2" name="second_riddle"><br><br>
+
+        <label for="riddle_3">"The maker doesnt want it, the buyer does not use it, but user does not see it."</label>
+        <input type="text" id="riddle_3" name="third_riddle"><br><br>
+
+        <input type="submit" value="submit">
+    </form>
+
+        <div id="checked_riddle_1"></div>
+        <div id="checked_riddle_2"></div>
+        <div id="checked_riddle_3"></div>
+        <div id="secret_meme"></div>
+    </div>
+
+        <div id="plink3" class="code_box_plink3">
+        <!-- this article is for containing the meme drop down menu-->
+        <article class="meme_player">
+
+            <h3>Select a Video</h3>
+            <select id="video_selector" class="meme_menu">
+            <option disabled selected>Select a video</option>
+            </select>
+
+            <br><br>
+
+            <video class="meme_video" id="video_player" width="640" onloadstart="this.volume=0.75" autoplay controls style="display: none;">
+            <source src="">
+            Your browser does not support the video tag.
+            </video>
+
+            </article>
+        </div>
+    </main>
+    <footer>
+        Email: psychodeath42@gmail.com <br>
+        Twitter: @kly50513710 <br>
+        This is where I'd put a ko-fi link <br>
+        IF I HAD ONE <br>
+    </footer>
+</body>

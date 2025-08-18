@@ -43,6 +43,7 @@ const video_list = [
     video_player.play();
     video_player.style.display = "block";
   });
+  
   //injecting text articles
   document.getElementById("h3_header_1").textContent = "This is a placeholder line.";
   document.getElementById("h4_subheader_1").textContent = "I forgot what I was suppose to say here.";
@@ -255,4 +256,25 @@ const video_list = [
     build_words(0,3,8,"down",table,true,4);
     build_words(2,4,9,"down",table,true,7);
   }
+  
+
+
+
+ /* function test_input(event){
+    
+    event.preventDefault();
+    console.log ("form was submitted");
+
+    let txt_spec_char = document.getElementById("txt_spec_char");
+    let txt_email = document.getElementById("txt_email");
+
+    let spec_char = /[`~!@#$%^&*()_+-=,./;'\<>?:"{}|]/
+
+    if (spec_char.test(txt_spec_char)){
+
+      div_result.textContent = "input contained special characters";
+
+    }
+    else{ div_result.textContent = "input did not contain special characters"}
+  } */
   
